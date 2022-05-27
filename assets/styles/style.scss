@@ -1,17 +1,16 @@
 // COLOURS
 
-$red: #EE6352;
-$green: #59CD90;
-$blue: #3FA7D6;
-$yellow: #FAC05E;
-$peach: #F79D84;
-$white: #FFFFFF;
-$black: #000000;
+$red: rgb(238, 101, 83);
+$green: rgb(89, 205, 144);
+$blue: rgb(63, 167, 214);
+$yellow: rgb(250, 192, 94);
+$peach: rgb(247, 157, 132);
+$white: rgb(255, 255, 255);
+$black: rgb(0, 0, 0);
 
 // FONTS
 
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Raleway:wght@400;800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Pompiere&family=Raleway:wght@400;800&display=swap');
 
 // WIDTHS
 
@@ -33,12 +32,21 @@ body  {
 }
 
 main  {
+    width: 1200px;
+    margin: auto;
     display: flex;
     flex-direction: column;
 }
 
 section  {
-    height: 200px;
+
+    &:first-child  {
+        height: 600px;
+    }
+    
+    &:nth-child(n+2)  {
+        height: 200px;
+    }
 
 
 
@@ -50,24 +58,52 @@ section  {
 
 
         .circle  {
-            border-style: solid;
+            border-style: none;
             border-radius: 50%;
-            width: 8rem;
-            height: 8rem;
+            width: 9rem;
+            height: 9rem;
             display: flex;
             flex-direction: column;
             text-align: center;
             font-size: 1.25rem;
-            padding-top: 0.25rem;
+            padding-top: 0.5rem;
             box-sizing: border-box;
             font-family: 'Raleway', sans-serif;
+            font-weight: bold;
 
             span  {
                 font-size: 4rem;
+                font-weight: 400;
             }
         }
     }
     
+}
+
+#intro  {
+    background-image: url('../img/example-house.webp');
+
+    #welcome-to {
+        color: $white;
+        font-family: 'Pompiere', sans-serif;
+        font-weight: bold;
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+        background-image: linear-gradient(to right, $black, $white);
+        padding: 1rem 2rem;
+    }
+}
+
+#features  {
+    .circle  {
+        background-color: $yellow;
+    }
+}
+
+#neighbourhood  {
+    .circle  {
+        background-color: $green;
+    }
 }
 
 #ameneties  {
@@ -76,9 +112,15 @@ section  {
     }
 }
 
-#safety  {
+#education  {
     .circle  {
         background-color: $blue;
+    }
+}
+
+#safety  {
+    .circle  {
+        background-color: $red;
     }
 }
 

@@ -1,10 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Raleway:wght@400;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Pompiere&family=Raleway:wght@400;800&display=swap");
 body {
   margin: 0;
   padding: 0;
 }
 
 main {
+  width: 1200px;
+  margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -14,7 +16,11 @@ main {
           flex-direction: column;
 }
 
-section {
+section:first-child {
+  height: 600px;
+}
+
+section:nth-child(n+2) {
   height: 200px;
 }
 
@@ -30,10 +36,10 @@ section header {
 }
 
 section header .circle {
-  border-style: solid;
+  border-style: none;
   border-radius: 50%;
-  width: 8rem;
-  height: 8rem;
+  width: 9rem;
+  height: 9rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -43,21 +49,50 @@ section header .circle {
           flex-direction: column;
   text-align: center;
   font-size: 1.25rem;
-  padding-top: 0.25rem;
+  padding-top: 0.5rem;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: 'Raleway', sans-serif;
+  font-weight: bold;
 }
 
 section header .circle span {
   font-size: 4rem;
+  font-weight: 400;
+}
+
+#intro {
+  background-image: url("../img/example-house.webp");
+}
+
+#intro #welcome-to {
+  color: white;
+  font-family: 'Pompiere', sans-serif;
+  font-weight: bold;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  background-image: -webkit-gradient(linear, left top, right top, from(black), to(white));
+  background-image: linear-gradient(to right, black, white);
+  padding: 1rem 2rem;
+}
+
+#features .circle {
+  background-color: #fac05e;
+}
+
+#neighbourhood .circle {
+  background-color: #59cd90;
 }
 
 #ameneties .circle {
-  background-color: #F79D84;
+  background-color: #f79d84;
+}
+
+#education .circle {
+  background-color: #3fa7d6;
 }
 
 #safety .circle {
-  background-color: #3FA7D6;
+  background-color: #ee6553;
 }
 /*# sourceMappingURL=style.css.map */

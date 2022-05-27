@@ -53,12 +53,7 @@ const House =
     roof_age: 10,
     furance_age: 9,
     driveway_age: 4,
-    fireplace: true,
-    dishwasher: true,
-    air_conditioner: true,
-    furnace: true,
-    baseboard_heating: false,
-    electric_car_charger: false,
+    household_fixtures: {electric_car_charger: false, fireplace: true, dishwasher: true, air_conditioner: true, furnace: true, baseboard_heating: false},
     number_of_bedrooms: 3,
     number_of_bathrooms: 2,
     number_of_parking_spaces: 2,
@@ -109,3 +104,7 @@ document.getElementById('closest-fire-hydrant').innerText = House.nearest_fire_h
 document.getElementById('minutes-to-bus-stop').innerText = House.minutes_to_bus_stop;
 document.getElementById('minutes-to-commuter-rail').innerText = House.driving_time_to_commuter_rail;
 document.getElementById('minutes-to-highway').innerText = House.driving_time_to_highway;
+
+console.log(House.household_fixtures)
+
+House.household_fixtures.map(({fixture, value}) => '<li>' + fixture + '</li>')
